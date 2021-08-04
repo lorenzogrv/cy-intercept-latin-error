@@ -1,7 +1,5 @@
 const { cy, describe, it, beforeEach, expect } = global
 
-console.log(global)
-
 const URL = 'https://example.com/test'
 
 function request (body) {
@@ -25,7 +23,7 @@ describe('cy.intercept latin tilde ArrayBuffer issue', () => {
     cy.intercept(URL, { body: { result: 'ok' } }).as('interception')
   })
 
-  describe('Cases working as of 8.x', () => {
+  describe('Cases working as of 8.1.0', () => {
     it('should work single "letter with tilde"', () => {
       request({ key: 'á' })
       cy.wait('@interception').then(dryAssert)
@@ -53,7 +51,7 @@ describe('cy.intercept latin tilde ArrayBuffer issue', () => {
     })
   })
 
-  describe('Cases not working as of 8.x', () => {
+  describe('Cases not working as of 8.1.0', () => {
     it('should work with mixed tilded and non-tilted letters', () => {
       request({ key: 'válúéwíthsómánytíldés' })
       cy.wait('@interception').then(dryAssert)
