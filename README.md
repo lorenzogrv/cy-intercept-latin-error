@@ -1,4 +1,4 @@
-This is a reproducible example for an issue with [Cypress](cypress.io)
+This is a reproducible example for an issue with [Cypress](https://cypress.io)
 
 ```shell
 npm ci
