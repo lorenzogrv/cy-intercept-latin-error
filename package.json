@@ -11,7 +11,7 @@
   "author": "Lorenzo García Rivera",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^8.1.0"
+    "cypress": "^8.2.0"
   },
   "devDependencies": {
     "standard": "^16.0.3"
